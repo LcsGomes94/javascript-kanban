@@ -1,0 +1,174 @@
+* {
+    caret-color: transparent;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #FAFFFD;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.kanban {
+    display: grid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 1fr;
+    min-width: 1200px;
+    min-height: 900px;
+    box-shadow: 0px 0px 8px 3px #CEC7D1;
+    gap: 3px;
+    font-size: 2.5rem;
+}
+
+.kanban > div {
+    display: flex;
+    align-items: center;
+    background-color: #695D6F;
+}
+
+.todo-header, .doing-header, .done-header {
+    justify-content: center;
+}
+
+[todo], [doing], [done] {
+    flex-flow: column nowrap;
+}
+
+.task {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100px;
+    width: 350px;
+    margin-top: 20px;
+    font-family: 'Indie Flower';
+    font-weight: normal;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    cursor: move;
+}
+
+.texto {
+    margin: 5px;
+}
+
+.alterar {
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+}
+
+[delete] {
+    margin-left: 8px;
+}
+
+[todo] > .task {
+    background-color: #3C91E6;
+}
+
+[doing] > .task {
+    background-color: #9688f2;
+}
+
+[done] > .task {
+    background-color: #A2D729;
+}
+
+.add {
+    margin-top: auto;
+}
+
+.add > a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #FAFFFD;
+}
+
+.confirma, .cancela {
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.cancela {
+    margin-left: 40px;
+}
+
+.formContainer {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.formContainerShow {
+    display: flex;
+}
+
+.formulario {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35px 1fr 35px;
+    align-items: center;
+    color: #695D6F;
+    background-color: #FAFFFD;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    height: 150px;
+    width: 500px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.formTitulo {
+    text-align: center;
+    margin: 0;
+}
+
+.confirma-cancela {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario > input {
+    border: none;
+    background-color: #FAFFFD;
+    font-family: 'Indie Flower';
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    caret-color: rgb(0 0 0 / 0.3);
+}
+
+.formulario > input::placeholder {
+    color: #aaa;
+}
+
+.formulario > input:focus::placeholder {
+    color: transparent;
+}
+
+.canDelete {
+    content: url("/img/delete2.png");
+    height: 18px;
+}

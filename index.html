@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/kanban.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>KANBAN</title>
+</head>
+
+<body>
+    <div class="kanban">
+        <div class="todo-header">TO DO</div>
+        <div class="doing-header">IN PROGRESS</div>
+        <div class="done-header">DONE</div>
+        <div todo draggable>
+            <div class="add"><a href="">+ Add New Task</a></div>
+        </div>
+        <div doing draggable>
+
+        </div>
+        <div done draggable>
+
+        </div>
+    </div>
+    <div class="formContainer" id="input-form">
+        <div class="formulario">
+            <p class="formTitulo">Task Text</p>
+            <input type="text" placeholder="Enter text here" id="text-input">
+            <div class="confirma-cancela">
+                <a href="" class="confirma">Confirmar</a><a href="" class="cancela">Cancelar</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/kanban.js"></script>
+</body>
+
+</html>
