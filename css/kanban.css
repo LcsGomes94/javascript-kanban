@@ -55,7 +55,7 @@ body {
     font-size: 1.2rem;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    cursor: move;
+    cursor: grab;
 }
 
 .texto {
@@ -70,6 +70,8 @@ body {
 
 [delete] {
     margin-left: 8px;
+    width: 18px;
+    height: 28px;
 }
 
 [todo] > .task {
